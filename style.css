@@ -1,0 +1,812 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+body {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    color: #6c7279;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* container========= */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    /* background-color: #2e304b; */
+    /* сверху и снизу по нулям, слева и справа авто */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/* heder========= */
+
+.header {
+    /* делаем хедер поверх всеж элементов иначе говоря самый верхний слой  */
+    /* wight 100% это ширина для шапки */
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+/* .header.fixed script */
+.header.fixed{
+    position: fixed;
+    height: auto;
+    background-color: #31344e;
+}
+.header.fixed .header__inner{
+    padding: 15px 0;
+    border-bottom: 0;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    /* выровнять в линере контейнера по центру */
+    align-items: center;
+    /* отступы сверху и снизу 38 пикселей */
+    padding: 38px 0;
+    border-bottom: 1px solid #50536a;
+}
+
+
+/* nav=======блок */
+
+.nav {
+    display: flex;
+    font-size: 13px;
+    /* жирность шрифта типа болт*/
+    font-weight: 700;
+    /* сделать все буквы большими */
+    text-transform: uppercase;
+}
+
+.nav__link {
+    margin-left: 59px;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.75;
+    /* при наведении плавность перехода желательно 0.1 макс 0.2 сек */
+    transition: opacity 0.1s linear;
+}
+
+
+/* Выбирает любой элемент, который является первым элементом
+   среди своих братьев и сестер */
+
+.nav__link:first-child {
+    margin-left: 0;
+}
+
+
+/* при наведении на ссылки */
+
+.nav__link:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+
+/* intro
+    ==========новый блок */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 750px;
+    padding-top: 100px;
+    background: #31344e url(img/layer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro__title {
+    margin: 0 0 40px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 65px;
+    /* растояние между буквами относительно font-size: 65*1.1; */
+    line-height: 1.1;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.intro__subtitle {
+    margin-bottom: 90px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+
+/* Button====новый блок для кнопки */
+
+
+/* inline-block чтобы задавать пединги т.е. отступы в стороны */
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 14px 40px;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s linear;
+}
+
+.btn--red {
+    background-color: #e84545;
+}
+
+.btn--red:hover {
+    background-color: #a83232;
+}
+
+.btn--long {
+    min-width: 280px;
+}
+
+
+/* feature */
+
+.feature {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px 0;
+    text-align: center;
+}
+
+.feature__item {
+    width: 33.33333%;
+    padding: 0 35px;
+    margin: 40px 0;
+}
+
+.feture__icon {
+    margin-bottom: 25px;
+}
+
+.feature__title {
+    margin-bottom: 25px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2d3033;
+    text-transform: uppercase;
+}
+
+.feature__text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #80858b;
+}
+
+
+/* works */
+
+.works {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1170px;
+}
+
+.works__item {
+    width: 25%;
+    height: 350px;
+    position: relative;
+    /* скрываем всё что вылазит за края блока */
+    overflow: hidden;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+
+/* показать при наведении */
+
+.works__item:hover .works__content {
+    opacity: 1;
+}
+
+.works__layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.works__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(232, 69, 69, 0.9);
+    /* скрывать до наведения */
+    opacity: 0;
+    /* плавность показа при наведении */
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.works__title {
+    margin-bottom: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.works__text {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: thin;
+    color: #fff;
+}
+
+
+/* team */
+
+.team {
+    margin: 100px 0 70px;
+}
+
+.team__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.team__item {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.team__foto {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.team__name {
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    color: #2d3033;
+    /* отступ снизу margin-bottom: ; */
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.team__prof {
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    font-weight: thin;
+    color: #e84545;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.team__text {
+    margin-bottom: 30px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    /* межстрочный отступ */
+    line-height: 1.5;
+    font-weight: thin;
+    color: #6c7279;
+}
+
+
+/* social */
+
+.social {
+    display: flex;
+}
+
+.social--footer {
+    justify-content: center;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin-right: 4px;
+    background-color: #fff;
+    border: 1px solid #e8ecee;
+    transition: background 0.1s linear;
+}
+
+.social__item:hover {
+    background-color: #e8ecee;
+}
+
+.social__item:hover .social__icon {
+    fill: #0384fc;
+    transition: fill 0.1s linear;
+}
+
+.social--footer .social__item {
+    background-color: transparent;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 2px;
+}
+
+.social--footer .social__item:hover {
+    background-color: #fff;
+}
+
+.social__icon {
+    display: block;
+    fill: #c6cacc;
+    height: 18px;
+}
+
+.social--footer .social__icon {
+    fill: #fff;
+}
+
+
+/* testimonials */
+
+.testimonials {
+      height: auto;
+    /* чтоб за края не вылезали */
+    overflow: hidden;
+    background-color: #53354a;
+}
+.reviews_slider{
+    height: auto;
+    overflow: hidden;
+}
+.testimonials__item {
+    display: flex;
+    flex: 1 1 auto;
+     padding: 10px 5px 5px 0px;
+    /*overflow: hidden;*/
+}
+
+.testimonials__foto {
+   
+    /* чтобы спозиционировать относительно этого блока */
+   /* position: relative;*/
+}
+
+.testimonials__img {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    /* строго по центру по горизонтали top: 50%; и transform: translateY(-50%); */
+    transform: translateY(-50%);
+}
+
+.testimonials__content {
+    padding: 5px 5px 5px 20px;
+    text-align: center;
+    right: 0;
+   
+}
+
+.testimonials__text {
+
+    margin-bottom: 25px;
+    font-family: "Cardo", sans-serif;
+    font-size: 36px;
+    color: #fff;
+    font-style: italic;
+    /* межбуквенный отступ */
+    line-height: 1.2;
+}
+
+.testimonials_autor {
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.slick-dots{
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* download */
+
+.download {
+    margin: 90px 0;
+    text-align: center;
+}
+
+.download__title {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #6c7279;
+    font-weight: 300;
+}
+
+.suptitle_text {
+    margin-bottom: 40px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #2d3033;
+}
+
+
+/* footer */
+
+.footer {
+    background-color: #3a3e64;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 0;
+}
+
+.footer__block {
+    width: 33.33333%;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.footer__title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer__adress {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.5);
+    /* убираем наклон шрифта */
+    font-style: normal;
+}
+
+.footer__text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* copyright */
+
+.copyright {
+    padding: 25px 0;
+    background-color: #313454;
+}
+
+.copyright__text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #808080;
+}
+
+.copyright__text span {
+    color: #fff;
+}
+
+
+/* burger */
+
+.burger {
+    display: none;
+    padding: 9px 2px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.burger_item {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    font-size: 0;
+    color: transparent;
+    position: relative;
+}
+
+.burger_item::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    top: -8px;
+    background-color: #fff;
+}
+
+.burger_item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    bottom: -8px;
+    background-color: #fff;
+}
+
+
+/* media медиа запросы т.е. переломные точки при изменении размера экрана mobile */
+
+@media (max-width: 901px) {
+    /* nav */
+    .nav {
+        display: none;
+        width: 100%;
+        text-align: right;
+        flex-direction: column;
+        position: absolute;
+        background-color: #313454;
+        top: 100%;
+        right: 0;
+    }
+    .nav.show{
+        display: flex;
+    }
+
+    .nav__link{
+        padding: 9px 15px;
+    }
+    /* burger */
+    .burger {
+        display: block;
+    }
+    /* intro */
+    .intro__title {
+        font-size: 40px;
+    }
+    /* feature */
+    .feature{
+        margin: 40px 0;
+    }
+    .feature__item {
+        width: 50%;
+    }
+    /* works */
+    .works__item {
+        width: 50%;
+    }
+    /*  */
+    /* team  */
+    .team{
+        margin: 50px 0 30px;
+    }
+    .team__item {
+        width: 50%;
+        text-align: center;
+    }
+    .team__foto{
+        /* выравниваем фото по центру */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* social */
+    .social{
+        justify-content: center;
+    }
+    /*/* Testimonials */
+    .testimonials__item{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .testimonials__foto{
+        width: 100%;
+        
+        overflow: hidden;
+    }
+    .testimonials__content{
+        padding: 5px 5px 5px 0px       
+    }
+    .testimonials__text {
+      /*  width: 100%;*/
+        font-size: 20px;
+    }
+    /* .testimonials__item {
+        width: 100%;
+    } */
+
+}
+
+@media (max-width: 760px) {
+    /* intro */
+    .intro {
+        height: auto;
+        padding: auto;
+    }
+    /* feature */
+    .feature{
+        margin: 10px 0;
+    }
+    .feature__item {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* team  */
+
+    .team__item {
+        width: 100%; 
+    }
+    .team__name {
+        font-size: 14px;
+    }
+    .team__prof {
+        font-size: 11px;
+    }
+    .team__text {
+        font-size: 10px;
+    }
+    .team__foto {
+        width: 100%;
+    }
+    /* works */
+    .works__item {
+        width: 100%;
+       height: 300px;
+    }
+     /* Testimonials */
+     /*.testimonials__foto{
+        min-width: 760px;
+    }*/
+    /* btn */
+    .btn--long{
+        min-width: 260px;
+    }
+    /* download */
+    .download{
+        margin: 50px 0;
+    }
+    .download__title{
+        font-size: 20px;
+    }
+    /* footer */
+    .footer__block{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 30px;
+        
+    }
+    .footer__inner{
+        padding: 30px 0;
+    }
+    .footer__inner:last-child{
+        margin-bottom: 0;
+    }
+    }
+  
